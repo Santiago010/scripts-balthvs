@@ -6,8 +6,9 @@ CSV_FILE="maillist.csv"  # Asegúrate de que el archivo esté en el mismo direct
 # Nombre de la columna que contiene los correos electrónicos
 COLUMN_NAME="email"
 
-# Archivo de salida
-OUTPUT_FILE="output.txt"
+# Archivos de salida
+OUTPUT_TXT="output.txt"
+OUTPUT_CSV="emails_bandsintown.csv"
 
 # Verificar si el archivo CSV existe
 if [[ ! -f "$CSV_FILE" ]]; then
@@ -15,20 +16,31 @@ if [[ ! -f "$CSV_FILE" ]]; then
     exit 1
 fi
 
-# Extraer la columna y guardar en el archivo de texto
-awk -F',' -v col="$COLUMN_NAME" '
+# Detectar el delimitador correcto (',' o ';')
+DELIMITER=$(head -n 1 "$CSV_FILE" | grep -q ";" && echo ";" || echo ",")
+
+# Crear el archivo CSV con encabezados
+echo "Email,Origen" > "$OUTPUT_CSV"
+
+# Extraer la columna y procesar los datos
+awk -F"$DELIMITER" -v col="$COLUMN_NAME" '
+    BEGIN { col_index = -1 }
     NR==1 {
         for (i=1; i<=NF; i++) {
-            if ($i == col) column=i
+            gsub(/^[ \t"]+|[ \t"]+$/, "", $i)  # Eliminar comillas y espacios
+            if ($i == col) col_index=i
         }
-        if (!column) {
+        if (col_index == -1) {
             print "❌ Error: No se encontró la columna " col " en el archivo CSV."
             exit 1
         }
     }
-    NR>1 && column {
-        print $column
+    NR>1 && col_index != -1 {
+        gsub(/^[ \t"]+|[ \t"]+$/, "", $col_index)  # Limpiar espacios y comillas
+        print $col_index > "'"$OUTPUT_TXT"'"  # Guardar en el archivo de texto
+        print $col_index ",Bandsintown"  # Guardar en el CSV
     }
-' "$CSV_FILE" > "$OUTPUT_FILE"
+' "$CSV_FILE" >> "$OUTPUT_CSV"
 
-echo "✅ Los emails han sido guardados en: $OUTPUT_FILE"
+echo "✅ Los emails han sido guardados en: $OUTPUT_TXT"
+echo "✅ El archivo CSV con origen 'Mailchimp' ha sido generado: $OUTPUT_CSV"

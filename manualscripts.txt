@@ -1,0 +1,16 @@
+1. rename.sh
+
+este se usa para correrlo en la carpeta inbox para el fichero de instagram,
+renombra todas carpetas a un nombre mas legible
+
+2. covertall.sh
+
+este se usa para correlo en la carpeta inbox para el fichero de instagram,
+codifica todos archivos json
+
+3. extractemail
+
+este se usa para correlo en la carpeta inbo para el fichero de instagram,
+obtiene todos los correos de los archivos json y los pone un archivo txt llamado emails_extracted.txt
+
+4. 
