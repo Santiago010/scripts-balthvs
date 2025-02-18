@@ -1,0 +1,50 @@
+Alabama:Birmingham Montgomery Huntsville
+Alaska:Anchorage Fairbanks Juneau
+Arizona:Phoenix Tucson Mesa
+Arkansas:Little Rock Fayetteville Fort Smith
+California:Los Angeles San Diego San Francisco Sacramento San Jose Fresno
+Colorado:Denver Colorado Springs Aurora
+Connecticut:Bridgeport New Haven Stamford Hartford
+Delaware:Wilmington Dover Newark
+Florida:Miami Orlando Tampa Jacksonville Tallahassee
+Georgia:Atlanta Augusta Savannah
+Hawaii:Honolulu Hilo Kailua
+Idaho:Boise Nampa Meridian
+Illinois:Chicago Springfield Peoria
+Indiana:Indianapolis Fort Wayne Evansville
+Iowa:Des Moines Cedar Rapids Davenport
+Kansas:Wichita Overland Park Topeka
+Kentucky:Louisville Lexington Bowling Green
+Louisiana:New Orleans Baton Rouge Shreveport
+Maine:Portland Lewiston Bangor
+Maryland:Baltimore Annapolis Rockville
+Massachusetts:Boston Worcester Springfield
+Michigan:Detroit Grand Rapids Ann Arbor
+Minnesota:Minneapolis Saint Paul Rochester
+Mississippi:Jackson Gulfport Southaven
+Missouri:Kansas City St. Louis Springfield
+Montana:Billings Missoula Great Falls
+Nebraska:Omaha Lincoln Bellevue
+Nevada:Las Vegas Reno Henderson
+New Hampshire:Manchester Nashua Concord
+New Jersey:Newark Jersey City Paterson
+New Mexico:Albuquerque Santa Fe Las Cruces
+New York:New York City Buffalo Rochester Albany Syracuse
+North Carolina:Charlotte Raleigh Greensboro
+North Dakota:Fargo Bismarck Grand Forks
+Ohio:Columbus Cleveland Cincinnati
+Oklahoma:Oklahoma City Tulsa Norman
+Oregon:Portland Eugene Salem
+Pennsylvania:Philadelphia Pittsburgh Allentown Harrisburg
+Rhode Island:Providence Warwick Cranston
+South Carolina:Columbia Charleston Greenville
+South Dakota:Sioux Falls Rapid City Aberdeen
+Tennessee:Nashville Memphis Knoxville
+Texas:Houston Dallas Austin San Antonio Fort Worth
+Utah:Salt Lake City Provo West Valley City
+Vermont:Burlington Montpelier Rutland
+Virginia:Virginia Beach Richmond Norfolk
+Washington:Seattle Spokane Tacoma
+West Virginia:Charleston Huntington Morgantown
+Wisconsin:Milwaukee Madison Green Bay
+Wyoming:Cheyenne Casper Laramie
